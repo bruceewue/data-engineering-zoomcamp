@@ -62,11 +62,12 @@ x-airflow-common:
     AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: 'google-cloud-platform://?extra__google_cloud_platform__key_path=/.google/credentials/google_credentials.json'
 
     # TODO: Please change GCP_PROJECT_ID & GCP_GCS_BUCKET, as per your config
-    GCP_PROJECT_ID: 'pivotal-surfer-336713'
-    GCP_GCS_BUCKET: 'dtc_data_lake_pivotal-surfer-336713'
+    GCP_PROJECT_ID: 'dtc-de-368600'
+    GCP_GCS_BUCKET: 'dtc_data_lake_dtc-de-368600'
 
   volumes:
-    - ./dags:/opt/airflow/dags
+#edited
+    - ./dags_local:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ~/.google/credentials/:/.google/credentials:ro
